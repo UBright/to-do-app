@@ -10,7 +10,7 @@ function createNewToDo() {
 
  toDos.push({
      title: newToDoText.value,
-     complete: false
+     complete: false,
      id: id
    });
 
@@ -26,7 +26,7 @@ function createNewToDo() {
  toDoList.textContent = '';
 
  toDos.forEach(function(toDo) {
-          const newToDo = document.createElement('li');
+          const newLi = document.createElement('li');
           const checkbox = document.createElement('input');
           checkbox.type = "checkbox";
 
@@ -37,9 +37,11 @@ function createNewToDo() {
           toDos = toDos.filter(function(item){
           return item.id !== toDo.id;
         })
-           renderTheUI();
 
+        renderTheUI();
          });
+
+
 
          newLi.textContent = toDo.title;
 

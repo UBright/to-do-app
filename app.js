@@ -36,6 +36,8 @@ function onReady() {
      newLi.parentNode.removeChild(newLi);
 });
 
+});
+
 }
 
 window.onload = function() {
